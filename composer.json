@@ -1,5 +1,14 @@
 {
+    "name": "afcyy/tnet-sentry",
+    "description": "A brief description of your package",
+    "type": "library",
+    "license": "MIT",
     "require": {
         "sentry/sentry": "^4.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "TnetSentry\\": "src/"
+        }
     }
 }
