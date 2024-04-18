@@ -1,5 +1,7 @@
 <?php
 
+namespace TnetSentry;
+
 use function Sentry\captureException;
 use function Sentry\init;
 
