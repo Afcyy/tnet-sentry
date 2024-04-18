@@ -5,7 +5,7 @@ namespace TnetSentry;
 use function Sentry\captureException;
 use function Sentry\init;
 
-class TnetSentry
+class Sentry
 {
     public static function init() {
         init([
