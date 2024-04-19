@@ -4,7 +4,8 @@
     "type": "library",
     "license": "MIT",
     "require": {
-        "sentry/sentry": "^4.7"
+        "sentry/sentry": "^4.7",
+        "sentry/sentry-laravel": "^4.4"
     },
     "autoload": {
         "psr-4": {
