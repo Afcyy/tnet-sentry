@@ -4,6 +4,7 @@
     "type": "library",
     "license": "MIT",
     "require": {
+        "php": "^7.4",
         "sentry/sentry": "^4.7",
         "sentry/sentry-laravel": "^4.4"
     },
