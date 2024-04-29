@@ -5,7 +5,7 @@ namespace TnetSentry;
 use function Sentry\captureException;
 use function Sentry\init;
 
-class PHPSentry
+class Sentry
 {
     public static function init(
         $SENTRY_LARAVEL_DSN,
@@ -24,6 +24,14 @@ class PHPSentry
     private static function SetExceptionHandler() {
         set_exception_handler(function (\Throwable $exception) {
             captureException($exception);
+
+            header('Content-type: application/json; charset=utf-8');
+            http_response_code(500);
+
+            echo json_encode([
+                'success' => false,
+                'message' => $exception->getMessage(),
+            ], JSON_UNESCAPED_UNICODE);
         });
     }
 }
